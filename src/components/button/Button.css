@@ -1,0 +1,16 @@
+button {
+  cursor: pointer;
+}
+.visitar {
+  color: var(--rtc-text-2);
+  background-color: var(--rtc-bgColor3);
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: var(--rtc-border-radius-m);
+  margin: 8%;
+}
+.visitar:hover {
+  box-shadow: 0 0 50px var(--rtc-bgColor2);
+  transition: 1s;
+  transform: rotateY(360deg);
+}

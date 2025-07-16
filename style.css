@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+  /* COLORS */
+  --rtc-color-1: #ffffff;
+  --rtc-color-2: lightgrey;
+  --rtc-color-3: red;
+  --rtc-color-4: #080404;
+  --rtc-color-fondo-1: #e7e7e7;
+  --rtc-bgColor: var(--rtc-color-1);
+  --rtc-bgColor2: var(--rtc-color-2);
+  --rtc-bgColor3: var(--rtc-color-3);
+  --rtc-bgColor4: var(--rtc-color-4);
+  --rtc-text: var(--rtc-color-4);
+  --rtc-text-2: var(--rtc-color-1);
+  --rtc-text-3: var(--rtc-color-3);
+  /* BORDER RADIUS */
+  --rtc-border-radius: 5px;
+  --rtc-border-radius-m: 50%;
+  --rtc-border-radius-xs: 10px;
+  --rtc-border-radius-s: 20px;
+  --rtc-border-radius: 5px;
+
+  --rtc-border-radius: 5px;
+
+  /* SPACINGS */
+  --rtc-margin-xs: 5px;
+  --rtc-margin-s: 10px;
+  --rtc-margin-m: 20px;
+  --rtc-margin-l: 30px;
+  --rtc-margin-xl: 40px;
+  --rtc-padding-xxs: 1px;
+  --rtc-padding-xs: 3px;
+  --rtc-padding-s: 5px;
+  --rtc-padding-ms: 20px;
+  --rtc-padding-m: 20px;
+  --rtc-padding-l: 30px;
+  --rtc-padding-xl: 40px;
+  --rtc-gap-xs: 1px;
+  --rtc-gap-s: 10px;
+  --rtc-gap-m: 20px;
+  --rtc-gap-l: 30px;
+  --rtc-gap-xl: 40px;
+  --opacidad-negro: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto Flex', sans-serif;
+}
+#app {
+  background-color: var(--rtc-bgColor);
+}

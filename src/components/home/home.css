@@ -1,0 +1,92 @@
+/* Header */
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--rtc-padding-xxs);
+}
+.iconePinterest,
+.desktopIconCampana,
+.desktopIconComments,
+.upRightButton {
+  cursor: pointer;
+  padding: var(--rtc-padding-m);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  z-index: 1;
+}
+.iconePinterest {
+  background-image: url('/assets/pinterest_logo.png');
+}
+.desktopIconCampana {
+  background-image: url('/assets/campana.png');
+}
+.desktopIconComments {
+  background-image: url('/assets/comentarios.png');
+}
+.upRightButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rtc-color-fondo-1);
+  border-radius: var(--rtc-border-radius-m);
+  font-size: medium;
+  max-height: 40px;
+  max-width: 40px;
+  border: 2px;
+}
+.iconePinterest:hover,
+.desktopIconCampana:hover,
+.desktopIconComments:hover,
+.upRightButton:hover {
+  transform: scale(1.05) skew(-5deg);
+}
+.headerSearchContainer {
+  display: flex;
+  background-color: var(--rtc-bgColor2);
+  border-radius: var(--rtc-border-radius-s);
+  margin: var(--rtc-margin-s);
+  padding: 1%;
+  width: 90%;
+  height: 90%;
+  font-size: 100%;
+}
+.inputInfo {
+  background-color: var(--rtc-bgColor2);
+  padding: var(--rtc-padding-s);
+  border: none;
+  width: 100%;
+}
+.icon {
+  background-color: var(--rtc-bgColor2);
+}
+/* Main */
+.main {
+  display: grid;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+#notification {
+  position: fixed;
+  font-size: small;
+  margin: var(--rtc-margin-s);
+  background-color: var(--rtc-bgColor3);
+  color: var(--rtc-color-4);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  z-index: 1;
+  opacity: 0.95;
+}
+#containerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: var(--rtc-gap-xs);
+}

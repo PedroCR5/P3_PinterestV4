@@ -1,0 +1,104 @@
+.cardDiv {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  flex-direction: column;
+  margin: var(--rtc-margin-xs);
+  height: 100%;
+  padding: var(--rtc-padding-s);
+}
+.imgImageDiv {
+  border: solid;
+  position: center;
+  height: auto;
+  width: 100%;
+  size: contain;
+  border-radius: var(--rtc-border-radius-xs);
+}
+.firstCardDiv {
+  position: relative;
+}
+.firstCardDiv > .imgImageDiv {
+  opacity: 0.5;
+}
+.firstCardDiv > .imgPersonRound {
+  z-index: 1;
+}
+.initialIconsBox {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  opacity: 1;
+  width: 100%;
+}
+.cameraLikesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.likes,
+.camera {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  object-fit: cover;
+  border-radius: var(--rtc-border-radius-m);
+  padding: 30%;
+  font-size: medium;
+  height: auto;
+  max-width: 10%;
+  min-width: 30px;
+}
+.likesNumber,
+.cameraNumber {
+  font-size: small;
+  font-weight: bold;
+}
+.camera {
+  background-image: url(/assets/camera.png);
+}
+.likes {
+  background-image: url(/assets/heart.png);
+}
+.upImg {
+  display: flex;
+  background-image: url(/assets/upImage.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: large;
+}
+.date {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+.upImg:hover {
+  transform: translate(-0.5em, -0.1em) scale(1.05);
+  transition: 0.3s;
+}
+.imgPersonRound {
+  cursor: pointer;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: solid;
+  border-radius: var(--rtc-border-radius-m);
+  max-width: 20%;
+  border-width: 5px;
+  margin-top: -10%;
+}
+.imgPersonRound:hover {
+  transform: scale(2.5);
+  transition: 0.5s;
+}
