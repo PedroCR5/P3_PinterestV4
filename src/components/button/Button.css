@@ -4,10 +4,10 @@ button {
 .visitar {
   color: var(--rtc-text-2);
   background-color: var(--rtc-bgColor3);
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
   border-radius: var(--rtc-border-radius-m);
-  margin: 8%;
+  margin: 6%;
 }
 .visitar:hover {
   box-shadow: 0 0 50px var(--rtc-bgColor2);

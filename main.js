@@ -52,7 +52,7 @@ Puntos Positivos
 Mejoras Opcionales
 
 Tal como se señala en los requisitos, se deben cumplir también con los requisitos básicos de los primeros proyectos. Nunca olvides las meta etiquetas, son ellas las que te ayudarán a posicionar tu página.
-Hay varias funciones que te podrías ahorrar; por ejemplo, la función completarHeader podrías ahorrártela añadiendo el atributo directamente al elemento.
+//Hay varias funciones que te podrías ahorrar; por ejemplo, la función completarHeader podrías ahorrártela añadiendo el atributo directamente al elemento.
 Es mejor práctica añadir el atributo src de las imágenes directamente en el elemento y no por el CSS. Por accesibilidad, debes añadir también atributos como el “alt” (esa info la puedes tomar de la API)
 Se recomienda que los nombres de las funciones sean más indicativos de éstas.
 Hay que cuidar un poco más el visual de la página.

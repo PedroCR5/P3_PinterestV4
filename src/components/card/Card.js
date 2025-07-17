@@ -42,19 +42,21 @@ export function createCards(imagesList) {
     //Camara y likes
     const initialIconsBox = document.createElement("div");
     const cameraContainer = document.createElement("div");
-    const camera = document.createElement("span");
+    const camera = document.createElement("img");
     const cameraNumber = document.createElement("span");
     const likesContainer = document.createElement("div");
-    const likes = document.createElement("span");
+    const likes = document.createElement("img");
     const likesNumber = document.createElement("span");
     initialIconsBox.className = "initialIconsBox";
     cameraContainer.className = "cameraLikesContainer";
     likesContainer.className = "cameraLikesContainer";
     camera.className = "camera";
+    camera.src = "./assets/camera.png";
     cameraNumber.className = "cameraNumber";
     cameraNumber.innerHTML = image.user.total_photos;
     likesContainer.className = "cameraLikesContainer";
     likes.className = "likes";
+    likes.src = "./assets/heart.png";
     likesNumber.className = "likesNumber";
     likesNumber.innerHTML = image.likes;
     cardDiv.appendChild(initialIconsBox);
@@ -66,33 +68,4 @@ export function createCards(imagesList) {
     likesContainer.appendChild(likes);
     likesContainer.appendChild(likesNumber);
   });
-
-  // Información especial de la primera carta
-  /* const primerCardDiv = document.querySelector("#containerCards .cardDiv");
-  primerCardDiv.className = "cardDiv firstCardDiv";
-  const initialIconsBox = document.createElement("div");
-  const cameraContainer = document.createElement("div");
-  const camera = document.createElement("span");
-  const cameraNumber = document.createElement("span");
-  const likesContainer = document.createElement("div");
-  const likes = document.createElement("span");
-  const likesNumber = document.createElement("span");
-  initialIconsBox.className = "initialIconsBox";
-  cameraContainer.className = "cameraLikesContainer";
-  likesContainer.className = "cameraLikesContainer";
-  camera.className = "camera";
-  cameraNumber.className = "cameraNumber";
-  cameraNumber.innerHTML = imagesList[0].user.total_photos;
-  likesContainer.className = "cameraLikesContainer";
-  likes.className = "likes";
-  likesNumber.className = "likesNumber";
-  likesNumber.innerHTML = imagesList[0].likes;
-  primerCardDiv.appendChild(initialIconsBox);
-  initialIconsBox.appendChild(cameraContainer);
-  cameraContainer.appendChild(camera);
-  cameraContainer.appendChild(cameraNumber);
-  initialIconsBox.innerHTML += createButton({ texto: "Visitar", size: "l", classInfo: `visitar` });
-  initialIconsBox.appendChild(likesContainer);
-  likesContainer.appendChild(likes);
-  likesContainer.appendChild(likesNumber); */
 }
