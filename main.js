@@ -1,31 +1,25 @@
 import './style.css';
 import { getImages } from './src/components/infoAPI/infoAPI';
-import { funcionAEjecutar, prepararElModal } from './src/components/modal/modal';
+import { aceptNotification } from './src/components/modal/modal';
 import { pintarHTML } from './src/components/home/home';
 export const accesKey = 'ulcAHukAVcmsmE3YQCJcVOoI_rtjQjdVJzrx7QnswEI';
 export const endPoint = 'https://api.unsplash.com/search/photos';
 
 //Variables
-let firstWord = 'nada de nada';
-
+let firstSearchWord = 'nada de nada';
 // Pinto el HTML
 pintarHTML();
-
-// El modal
-prepararElModal();
+// Aceptar la notificación de busqueda errónea
 const modalButton = document.querySelector(".tryAgain");
-modalButton.addEventListener("click", funcionAEjecutar);
-
-
+modalButton.addEventListener("click", aceptNotification);
 //Traer información inicial de la API y pintarla
 getImages('dog');
-
 //Guardo la primera palabra de busqueda, voy a infoAPI.js para recoger la info y pinto las Cards en Card.js.
 document.getElementById('word').addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
     const valorInput = event.target.value;
-    if (firstWord === 'nada de nada') {
-      firstWord = event.target.value;
+    if (firstSearchWord === 'nada de nada') {
+      firstSearchWord = event.target.value;
     }
     getImages(`${valorInput}`);
     event.target.value = '';
@@ -34,11 +28,11 @@ document.getElementById('word').addEventListener('keydown', function (event) {
 
 // Pinchar en icono Pinterest para refrescar la primera búsqueda
 document.querySelector(`.iconePinterest`).onclick = function () {
-  if (firstWord === 'nada de nada') {
+  if (firstSearchWord === 'nada de nada') {
     getImages('cat');
   }
   else {
-    getImages(firstWord)
+    getImages(firstSearchWord)
   };
 };
 
@@ -71,6 +65,7 @@ Es recomendable que el HTML sea añadido por manejo del DOM y no por innerHTML, 
 Aunque tu gallery no queda vacía ocurre lo siguiente:
 Si no hago ninguna búsqueda con el input y clico en el logo me muestra gatos, que no es lo que veo cuando renderizo la página por primera vez (perros).
 Si hago una búsqueda de cualquier palabra y luego clico el logo, este no cumple la función de volver a la búsqueda inicial, sino que me renderiza las imagenes de la primera palabra que busqué con el input. La respuesta está en la secuencia de ejecución de tu código.
-La información especial debería estar en cada card , cada vez que haces hover en alguna de ellas, y no solo en la primera. Adicionalmente, el utilizar “document.getElementsByTagName('div')[5]”, no es una buena práctica porque si añades algo más al HTML antes de tus tarjetas el código se va a romper.
+La información especial debería estar en cada card , cada vez que haces hover en alguna de ellas, y no solo en la primera. 
+//Adicionalmente, el utilizar “document.getElementsByTagName('div')[5]”, no es una buena práctica porque si añades algo más al HTML antes de tus tarjetas el código se va a romper.
 Revisa la composición de tu componente Button, tienes varios detalles: texto, estilos, uso.
 */

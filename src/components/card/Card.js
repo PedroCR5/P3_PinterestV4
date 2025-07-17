@@ -1,6 +1,5 @@
 import { createButton } from "../button/button";
 import "./card.css";
-
 // Color
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -40,11 +39,36 @@ export function createCards(imagesList) {
     cardDiv.appendChild(name);
     cardDiv.appendChild(date);
     cardDiv.appendChild(upImg);
+    //Camara y likes
+    const initialIconsBox = document.createElement("div");
+    const cameraContainer = document.createElement("div");
+    const camera = document.createElement("span");
+    const cameraNumber = document.createElement("span");
+    const likesContainer = document.createElement("div");
+    const likes = document.createElement("span");
+    const likesNumber = document.createElement("span");
+    initialIconsBox.className = "initialIconsBox";
+    cameraContainer.className = "cameraLikesContainer";
+    likesContainer.className = "cameraLikesContainer";
+    camera.className = "camera";
+    cameraNumber.className = "cameraNumber";
+    cameraNumber.innerHTML = image.user.total_photos;
+    likesContainer.className = "cameraLikesContainer";
+    likes.className = "likes";
+    likesNumber.className = "likesNumber";
+    likesNumber.innerHTML = image.likes;
+    cardDiv.appendChild(initialIconsBox);
+    initialIconsBox.appendChild(cameraContainer);
+    cameraContainer.appendChild(camera);
+    cameraContainer.appendChild(cameraNumber);
+    initialIconsBox.innerHTML += createButton({ texto: "Visitar", size: "l", classInfo: `visitar` });
+    initialIconsBox.appendChild(likesContainer);
+    likesContainer.appendChild(likes);
+    likesContainer.appendChild(likesNumber);
   });
 
   // Información especial de la primera carta
-  const primerCardDiv = document.querySelector("#containerCards .cardDiv");
-  //const primerCardDiv = document.getElementsByTagName('div')[5];
+  /* const primerCardDiv = document.querySelector("#containerCards .cardDiv");
   primerCardDiv.className = "cardDiv firstCardDiv";
   const initialIconsBox = document.createElement("div");
   const cameraContainer = document.createElement("div");
@@ -65,24 +89,10 @@ export function createCards(imagesList) {
   likesNumber.innerHTML = imagesList[0].likes;
   primerCardDiv.appendChild(initialIconsBox);
   initialIconsBox.appendChild(cameraContainer);
+  cameraContainer.appendChild(camera);
+  cameraContainer.appendChild(cameraNumber);
   initialIconsBox.innerHTML += createButton({ texto: "Visitar", size: "l", classInfo: `visitar` });
   initialIconsBox.appendChild(likesContainer);
-  cameraContainer.appendChild(camera);
-  cameraContainer.appendChild(likesContainer);
   likesContainer.appendChild(likes);
-  likesContainer.appendChild(likesNumber);
-
-
-  /*   primerCardDiv.innerHTML +=
-      `<div class="initialIconsBox">
-          <div class="cameraLikesContainer">
-            <span class="camera"></span>
-            <span class="cameraNumber">+${imagesList[0].user.total_photos}</span>
-          </div>
-            ${createButton({ texto: "Visitar", size: "l", classInfo: `visitar` })}
-          <div class="cameraLikesContainer">
-             <span class="likes"></span>
-              <span class="likesNumber">${imagesList[0].likes}</span>
-          </div>
-                </div>` */
+  likesContainer.appendChild(likesNumber); */
 }

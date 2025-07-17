@@ -1,6 +1,5 @@
 import "./home.css";
 import { createButton } from "../button/button";
-//Pintar el HTML
 export function pintarHTML() {
   let appInfo = document.querySelector('#app');
   //Crear el Header
@@ -39,10 +38,11 @@ export function pintarHTML() {
   const divContainerCards = document.createElement("div");
   divNotification.id = "notification";
   notificationH2.className = "notificationH2";
+  notificationH2.innerHTML = `¡Busqueda errónea!, por favor inténtalo con palabras como gato, perro...`;
   divContainerCards.id = "containerCards";
   appInfo.appendChild(mainHTML);
   mainHTML.appendChild(divNotification);
   divNotification.appendChild(notificationH2);
-  divNotification.innerHTML += createButton({ size: "s", classInfo: `tryAgain` });
+  divNotification.innerHTML += createButton({ texto: "¡Pulsa para intentarlo de nuevo!", size: "s", classInfo: `tryAgain` });
   mainHTML.appendChild(divContainerCards);
 };
