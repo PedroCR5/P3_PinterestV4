@@ -8,6 +8,7 @@ button {
   padding-right: 1%;
   border-radius: var(--rtc-border-radius-m);
   margin: 6%;
+  padding: 2%;
 }
 .visitar:hover {
   box-shadow: 0 0 50px var(--rtc-bgColor2);
