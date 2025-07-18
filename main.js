@@ -36,10 +36,17 @@ document.querySelector(`.iconePinterest`).onclick = function () {
   };
 };
 
+//Visualizar los datos de Heart y Likes de una card
+/* const cardDivIcons = document.getElementsByClassName('cardDiv');
+cardDivIcons.addEventListener('mouseenter', seeIconsBox());
+function seeIconsBox() {
+  const cardDivIcons = document.getElementsByClassName('cardDiv');
+  cardDivIcons.className = "cardDivSin";
+} */
 /* 
 //Muy buena base de tu proyecto Async de Pinterest, pero hay unos detalles a mejorar que te dejo en los comentarios de más abajo.
 Las Notas Técnicas son las más críticas, pero no por ello dejes de lado las Propuestas de Mejora (sobre todo las tres primeras).
-//No te sientas frustrado por tantas correcciones, tienes una muy buena base, solo debes afinar un poco más. Las mejoras que te propongo no te deberían suponer dificultad, así que espero el ajuste de tu código.
+//No te sientas frustrado por tantas correcciones, tienes una muy buena base, solo debes afinar un psoco más. Las mejoras que te propongo no te deberían suponer dificultad, así que espero el ajuste de tu código.
 //Tal como las veces anteriores, por favor, no olvides volver a colocar el link del proyecto para que el sistema me notifique que ya hiciste los cambios.
 
 Puntos Positivos
