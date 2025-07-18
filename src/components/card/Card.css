@@ -6,6 +6,8 @@
   margin: var(--rtc-margin-xs);
   height: 100%;
   padding: var(--rtc-padding-s);
+  position: relative;
+  margin-top: -55px;
 }
 .imgImageDiv {
   border: solid;
@@ -29,6 +31,12 @@
   align-items: center;
   opacity: 1;
   width: 100%;
+  position: relative;
+  top: 55px;
+  z-index: -1;
+}
+.cardDiv:hover {
+  /*  */
 }
 .cameraLikesContainer {
   display: flex;

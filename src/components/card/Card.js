@@ -34,13 +34,16 @@ export function createCards(imagesList) {
     date.innerHTML = image.created_at.substring(0, 10);
     upImg.src = "./assets/upImage.png";
     divContainerCards.appendChild(cardDiv);
+    const initialIconsBox = document.createElement("div");
+
+    cardDiv.appendChild(initialIconsBox);
+
     cardDiv.appendChild(imgImageDiv);
     cardDiv.appendChild(imgPersonRound);
     cardDiv.appendChild(name);
     cardDiv.appendChild(date);
     cardDiv.appendChild(upImg);
     //Camara y likes
-    const initialIconsBox = document.createElement("div");
     const cameraContainer = document.createElement("div");
     const camera = document.createElement("img");
     const cameraNumber = document.createElement("span");
@@ -59,7 +62,6 @@ export function createCards(imagesList) {
     likes.src = "./assets/heart.png";
     likesNumber.className = "likesNumber";
     likesNumber.innerHTML = image.likes;
-    cardDiv.appendChild(initialIconsBox);
     initialIconsBox.appendChild(cameraContainer);
     cameraContainer.appendChild(camera);
     cameraContainer.appendChild(cameraNumber);
