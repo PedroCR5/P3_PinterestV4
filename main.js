@@ -37,6 +37,15 @@ document.querySelector(`.iconePinterest`).onclick = function () {
 };
 
 //Visualizar los datos de Heart y Likes de una card
+
+let cardDivInfo = document.querySelector(".cardDiv");
+
+cardDivInfo.addEventListener('mouseover', function (event) {
+  console.log("hola");
+  cardDivInfo.className = "iconePinterest";
+
+});
+
 /* const cardDivIcons = document.getElementsByClassName('cardDiv');
 cardDivIcons.addEventListener('mouseenter', seeIconsBox());
 function seeIconsBox() {
