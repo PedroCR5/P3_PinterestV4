@@ -15,21 +15,12 @@
   background-size: 80%;
   background-position: center;
   z-index: 1;
-}
-.iconePinterest {
-  background-image: url('/assets/pinterest_logo.png');
-}
-.desktopIconCampana {
-  background-image: url('/assets/campana.png');
-}
-.desktopIconComments {
-  background-image: url('/assets/comentarios.png');
+  max-width: 100px;
 }
 .upRightButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--rtc-color-fondo-1);
   border-radius: var(--rtc-border-radius-m);
   font-size: medium;
   max-height: 40px;

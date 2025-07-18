@@ -12,7 +12,7 @@ export async function getImages(query) {
   if (imagesList.length === 0) {
     const modalNotification = document.getElementById('notification');
     modalNotification.style.display = 'flex';
-    getImages('gatos');
+    getImages('cat');
   }
   //Si hay algún resultado creamos las cartas.
   else {

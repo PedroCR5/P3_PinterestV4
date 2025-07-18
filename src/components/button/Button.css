@@ -3,7 +3,6 @@ button {
 }
 .visitar {
   color: var(--rtc-text-2);
-  background-color: var(--rtc-bgColor3);
   padding-left: 1%;
   padding-right: 1%;
   border-radius: var(--rtc-border-radius-m);

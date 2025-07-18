@@ -13,6 +13,7 @@ export function pintarHTML() {
   const imgDesktopIconComments = document.createElement("img");
   divHeaderContainer.className = "headerContainer";
   imgIconePinterest.className = "iconePinterest";
+  imgIconePinterest.src = "./assets/pinterest_logo.png";
   headerSearchContainer.className = "headerSearchContainer";
   spanIcon.className = "icon";
   spanIcon.innerHTML = "🔍";
@@ -21,7 +22,9 @@ export function pintarHTML() {
   inputInfo.type = "text";
   inputInfo.placeholder = "Buscar...";
   imgDesktopIconCampana.className = "desktopIconCampana";
+  imgDesktopIconCampana.src = "./assets/campana.png";
   imgDesktopIconComments.className = "desktopIconComments";
+  imgDesktopIconComments.src = "./assets/comentarios.png";
   appInfo.appendChild(headerHTML);
   headerHTML.appendChild(divHeaderContainer);
   divHeaderContainer.appendChild(imgIconePinterest);
@@ -30,7 +33,7 @@ export function pintarHTML() {
   headerSearchContainer.appendChild(inputInfo);
   divHeaderContainer.appendChild(imgDesktopIconCampana);
   divHeaderContainer.appendChild(imgDesktopIconComments);
-  divHeaderContainer.innerHTML += createButton({ texto: "D", size: "s", classInfo: "upRightButton" });
+  divHeaderContainer.innerHTML += createButton({ classInfo: "upRightButton", bgColor: "var(--rtc-color-fondo-1)", texto: "D" });
   //Crear el Main
   const mainHTML = document.createElement("main");
   const divNotification = document.createElement("div");
@@ -43,6 +46,6 @@ export function pintarHTML() {
   appInfo.appendChild(mainHTML);
   mainHTML.appendChild(divNotification);
   divNotification.appendChild(notificationH2);
-  divNotification.innerHTML += createButton({ texto: "¡Pulsa para intentarlo de nuevo!", size: "s", classInfo: `tryAgain` });
+  divNotification.innerHTML += createButton({ classInfo: `tryAgain`, bgColor: "var(--rtc-bgColor2)", texto: "¡Pulsa para intentarlo de nuevo!" });
   mainHTML.appendChild(divContainerCards);
 };

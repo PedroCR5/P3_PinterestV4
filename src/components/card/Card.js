@@ -9,9 +9,9 @@ function getRandomColor() {
 }
 // Función crear cartas
 export function createCards(imagesList) {
-  document.querySelector("#containerCards").innerHTML = ` `;
   console.log(imagesList);
 
+  document.querySelector("#containerCards").innerHTML = ` `;
   // Pinto todas las cartas
   imagesList.forEach(image => {
     let randomColorImg = getRandomColor();
@@ -24,22 +24,22 @@ export function createCards(imagesList) {
     const upImg = document.createElement("img");
     cardDiv.className = "cardDiv";
     imgImageDiv.className = "imgImageDiv";
-    imgPersonRound.className = "imgPersonRound";
-    name.className = "name";
-    date.className = "date";
-    upImg.className = "upImg";
     imgImageDiv.src = image.urls.small;
+    imgImageDiv.alt = image.alt_description;
     imgImageDiv.loading = "lazy";
+    imgPersonRound.className = "imgPersonRound";
     imgPersonRound.src = image.user.profile_image.large;
+    imgPersonRound.alt = image.user.first_name;
     imgPersonRound.style.borderColor = randomColorImg;
+    name.className = "name";
     name.innerHTML = image.user.name;
+    date.className = "date";
     date.innerHTML = image.created_at.substring(0, 10);
+    upImg.className = "upImg";
     upImg.src = "./assets/upImage.png";
     divContainerCards.appendChild(cardDiv);
     const initialIconsBox = document.createElement("div");
-
     cardDiv.appendChild(initialIconsBox);
-
     cardDiv.appendChild(imgImageDiv);
     cardDiv.appendChild(imgPersonRound);
     cardDiv.appendChild(name);
@@ -57,17 +57,19 @@ export function createCards(imagesList) {
     likesContainer.className = "cameraLikesContainer";
     camera.className = "camera";
     camera.src = "./assets/camera.png";
+    camera.alt = "Cámara"
     cameraNumber.className = "cameraNumber";
     cameraNumber.innerHTML = image.user.total_photos;
     likesContainer.className = "cameraLikesContainer";
     likes.className = "likes";
     likes.src = "./assets/heart.png";
+    likes.alt = "likes"
     likesNumber.className = "likesNumber";
     likesNumber.innerHTML = image.likes;
     initialIconsBox.appendChild(cameraContainer);
     cameraContainer.appendChild(camera);
     cameraContainer.appendChild(cameraNumber);
-    initialIconsBox.innerHTML += createButton({ texto: "Visitar", size: "l", classInfo: `visitar` });
+    initialIconsBox.innerHTML += createButton({ classInfo: `visitar`, bgColor: "var(--rtc-bgColor3)", texto: "Visitar" });
     initialIconsBox.appendChild(likesContainer);
     likesContainer.appendChild(likes);
     likesContainer.appendChild(likesNumber);

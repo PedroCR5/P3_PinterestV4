@@ -1,6 +1,5 @@
 .tryAgain {
   cursor: pointer;
-  background-color: var(--rtc-bgColor2);
   margin: var(--rtc-margin-s);
   padding: var(--rtc-padding-s);
   border-radius: var(--rtc-border-radius);

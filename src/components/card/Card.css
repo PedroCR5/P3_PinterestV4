@@ -7,7 +7,7 @@
   height: 100%;
   padding: var(--rtc-padding-s);
   position: relative;
-  margin-top: -55px;
+  margin-top: -25px;
 }
 .imgImageDiv {
   border: solid;
@@ -16,13 +16,6 @@
   width: 100%;
   size: contain;
   border-radius: var(--rtc-border-radius-xs);
-}
-
-.firstCardDiv > .imgImageDiv {
-  opacity: 0.5;
-}
-.firstCardDiv > .imgPersonRound {
-  z-index: 1;
 }
 .initialIconsBox {
   display: flex;
@@ -35,8 +28,14 @@
   top: 55px;
   z-index: -1;
 }
-.cardDiv:hover {
-  /*  */
+.cardDiv:hover > .initialIconsBox {
+  z-index: 1;
+}
+.cardDiv:hover > .imgImageDiv {
+  opacity: 0.5;
+}
+.cardDiv:hover > .imgPersonRound {
+  z-index: 1;
 }
 .cameraLikesContainer {
   display: flex;
@@ -55,11 +54,8 @@
   font-size: small;
   font-weight: bold;
 }
-
 .upImg {
   display: flex;
-  /*   background-image: url(/assets/upImage.png);
- */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
