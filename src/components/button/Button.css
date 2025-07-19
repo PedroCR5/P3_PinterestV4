@@ -14,3 +14,20 @@ button {
   transition: 1s;
   transform: rotateY(360deg);
 }
+.initButton {
+  padding: var(--rtc-padding-s);
+  margin: var(--rtc-margin-s);
+  border-radius: var(--rtc-border-radius-s);
+  background-color: var(--rtc-bgColor2);
+}
+.initButton:hover {
+  background-color: var(--rtc-bgColor4);
+  color: var(--rtc-color-1);
+  transform: scale(1.5);
+  transition: 0.2s;
+}
+@media (max-width: 800px) {
+  .initButton {
+    display: none;
+  }
+}

@@ -4,7 +4,6 @@ import { aceptNotification } from './src/components/modal/modal';
 import { pintarHTML } from './src/components/home/home';
 export const accesKey = 'ulcAHukAVcmsmE3YQCJcVOoI_rtjQjdVJzrx7QnswEI';
 export const endPoint = 'https://api.unsplash.com/search/photos';
-
 //Variables
 let firstSearchWord = 'nada de nada';
 // Pinto el HTML
@@ -32,10 +31,3 @@ document.getElementById('word').addEventListener('keydown', function (event) {
 document.querySelector(`.iconePinterest`).onclick = function () {
   getImages('cat');
 };
-
-
-/* 
-Tal como se señala en los requisitos, se deben cumplir también con los requisitos básicos de los primeros proyectos. Nunca olvides las meta etiquetas, son ellas las que te ayudarán a posicionar tu página.
-Hay que cuidar un poco más el visual de la página.
-Para ser fiel al modelo, te faltó la nav que está al lado del logo.
-*/

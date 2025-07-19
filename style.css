@@ -19,10 +19,6 @@
   --rtc-border-radius-m: 50%;
   --rtc-border-radius-xs: 10px;
   --rtc-border-radius-s: 20px;
-  --rtc-border-radius: 5px;
-
-  --rtc-border-radius: 5px;
-
   /* SPACINGS */
   --rtc-margin-xs: 5px;
   --rtc-margin-s: 10px;
@@ -43,7 +39,6 @@
   --rtc-gap-xl: 40px;
   --opacidad-negro: 0;
 }
-
 * {
   margin: 0;
   padding: 0;

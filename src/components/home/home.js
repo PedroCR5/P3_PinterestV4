@@ -28,6 +28,9 @@ export function pintarHTML() {
   appInfo.appendChild(headerHTML);
   headerHTML.appendChild(divHeaderContainer);
   divHeaderContainer.appendChild(imgIconePinterest);
+  divHeaderContainer.innerHTML += createButton({ classInfo: "initButton", texto: "Inicio" });
+  divHeaderContainer.innerHTML += createButton({ classInfo: "initButton", texto: "Explorar" });
+  divHeaderContainer.innerHTML += createButton({ classInfo: "initButton", texto: "Crear" });
   divHeaderContainer.appendChild(headerSearchContainer);
   headerSearchContainer.appendChild(spanIcon);
   headerSearchContainer.appendChild(inputInfo);

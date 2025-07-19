@@ -26,6 +26,8 @@
   max-height: 40px;
   max-width: 40px;
   border: 2px;
+  padding: var(--rtc-padding-m);
+  margin: var(--rtc-margin-m);
 }
 .iconePinterest:hover,
 .desktopIconCampana:hover,

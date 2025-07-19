@@ -9,8 +9,6 @@ function getRandomColor() {
 }
 // Función crear cartas
 export function createCards(imagesList) {
-  console.log(imagesList);
-
   document.querySelector("#containerCards").innerHTML = ` `;
   // Pinto todas las cartas
   imagesList.forEach(image => {
