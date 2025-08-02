@@ -1,5 +1,5 @@
 import { createButton } from "../button/Button";
-import "./card.css";
+import "./Card.css";
 // Color
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
