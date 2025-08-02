@@ -1,4 +1,4 @@
-import { createButton } from "../button/button";
+import { createButton } from "../button/Button";
 import "./card.css";
 // Color
 function getRandomColor() {
