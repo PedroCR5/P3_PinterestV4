@@ -1,5 +1,6 @@
+import { createButton } from "../button/Button";
 import "./home.css";
-import { createButton } from "../button";
+
 export function pintarHTML() {
   let appInfo = document.querySelector('#app');
   //Crear el Header
